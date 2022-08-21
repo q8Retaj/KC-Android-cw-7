@@ -13,7 +13,6 @@ ArrayList<Items> Items=new ArrayList<>();
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        ArrayList<Items> items = new ArrayList<>();
         Items items1 = new Items("chesse", R.drawable.cheese, 0.640);
         Items items2 = new Items("chocolate", R.drawable.chocolate, 0.250);
         Items items3 = new Items("coffe", R.drawable.coffee, 1.010);
@@ -28,7 +27,7 @@ ArrayList<Items> Items=new ArrayList<>();
         Items.add(items5);
         Items.add(items6);
 
-        itemsAdapter itemsAdapter=new itemsAdapter(this,0,items);
+        itemsAdapter itemsAdapter=new itemsAdapter(this,0,Items);
         ListView listView=findViewById(R.id.listView);
         listView.setAdapter(itemsAdapter);
 
